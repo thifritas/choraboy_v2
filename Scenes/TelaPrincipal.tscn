@@ -1,0 +1,260 @@
+[gd_scene load_steps=21 format=3 uid="uid://dljmpxiarlgx4"]
+
+[ext_resource type="Script" uid="uid://6f0r884paeuu" path="res://Scenes/TelaPrincipal.gd" id="1_wflh4"]
+[ext_resource type="Texture2D" uid="uid://7mgyat02kink" path="res://Assets/Screen/buttons/Fundo_Home.png" id="2_wflh4"]
+[ext_resource type="Texture2D" uid="uid://b48skeg4pcc8g" path="res://Objects/Logo_Black.png" id="4_6yjb1"]
+[ext_resource type="Texture2D" uid="uid://det6p0p0lkfr3" path="res://Assets/Screen/Sombra.png" id="5_txvij"]
+[ext_resource type="Texture2D" uid="uid://d3p585mcsw6ds" path="res://Assets/Screen/buttons/garagem_button.png" id="6_sqxkb"]
+[ext_resource type="Texture2D" uid="uid://ds6mbhu0qhkys" path="res://Assets/Screen/buttons/correr_button.png" id="7_ya6xv"]
+[ext_resource type="Texture2D" uid="uid://dtpj2ryymxijs" path="res://Assets/Screen/buttons/config_button.png" id="8_xkpt5"]
+[ext_resource type="Texture2D" uid="uid://cge5wxotno2j7" path="res://Assets/Cars/golSemRoda.png" id="9_txvij"]
+[ext_resource type="Texture2D" uid="uid://dgmw7gvdorp2o" path="res://Assets/Screen/buttons/moeda_texture.png" id="10_ed026"]
+[ext_resource type="Texture2D" uid="uid://bphptaj84mmwc" path="res://Assets/Cars/rodaGol2.png" id="11_sqxkb"]
+[ext_resource type="Texture2D" uid="uid://cwpynx1ixvnr7" path="res://Assets/Cars/rodaGol.png" id="12_ya6xv"]
+[ext_resource type="Texture2D" uid="uid://cpwxk65gkfoc8" path="res://Assets/Screen/popup_config.png" id="13_qevr3"]
+[ext_resource type="Texture2D" uid="uid://d0ge12olhteni" path="res://Assets/Screen/buttons/sairpopup_button.png" id="14_ke7md"]
+[ext_resource type="Texture2D" uid="uid://c8jogg6xr85r7" path="res://Assets/Screen/buttons/som_button.png" id="15_6wnab"]
+[ext_resource type="Texture2D" uid="uid://cmpygfdba817g" path="res://Assets/Screen/buttons/musica_button.png" id="16_1d50t"]
+[ext_resource type="Texture2D" uid="uid://ck8qhidskeb5x" path="res://Assets/Screen/buttons/vibra_button.png" id="17_2tyx7"]
+[ext_resource type="Texture2D" uid="uid://m3bpmyt6drqq" path="res://Assets/Screen/buttons/Group 41.png" id="18_dq4qh"]
+[ext_resource type="Texture2D" uid="uid://4al54mdov2nw" path="res://Assets/Screen/buttons/salvar_button.png" id="19_lrvo1"]
+[ext_resource type="Texture2D" uid="uid://dqa4qvcogc11c" path="res://Assets/Screen/buttons/Profile.png" id="19_qevr3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dw6hg"]
+texture = ExtResource("13_qevr3")
+
+[node name="TelaPrincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wflh4")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 647.0
+texture = ExtResource("2_wflh4")
+expand_mode = 1
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 33.0
+offset_right = 645.0
+offset_bottom = 73.0
+texture = ExtResource("4_6yjb1")
+expand_mode = 1
+
+[node name="GaragemButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 380.0
+offset_right = 1352.0
+offset_bottom = 737.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("6_sqxkb")
+
+[node name="CorrerButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 395.0
+offset_right = 2690.0
+offset_bottom = 715.0
+scale = Vector2(0.13, 0.13)
+texture_normal = ExtResource("7_ya6xv")
+
+[node name="MoedaIcon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 956.0
+offset_top = 63.0
+offset_right = 1157.0
+offset_bottom = 113.0
+texture = ExtResource("10_ed026")
+expand_mode = 1
+
+[node name="DinheiroLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1010.0
+offset_top = 74.0
+offset_right = 1135.0
+offset_bottom = 102.0
+vertical_alignment = 1
+
+[node name="CarContainer" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RodaFrente" type="TextureRect" parent="CarContainer"]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 488.0
+offset_right = 433.0
+offset_bottom = 578.0
+pivot_offset = Vector2(45, 45)
+texture = ExtResource("11_sqxkb")
+expand_mode = 1
+
+[node name="RodaTras" type="TextureRect" parent="CarContainer"]
+layout_mode = 0
+offset_left = 670.0
+offset_top = 489.0
+offset_right = 759.0
+offset_bottom = 578.0
+pivot_offset = Vector2(45, 45)
+texture = ExtResource("12_ya6xv")
+expand_mode = 1
+
+[node name="Chassis" type="TextureRect" parent="CarContainer"]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 389.0
+offset_right = 822.0
+offset_bottom = 587.0
+texture = ExtResource("9_txvij")
+expand_mode = 1
+
+[node name="PersonagemSprite" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 644.0
+offset_top = 355.0
+offset_right = 782.0
+offset_bottom = 597.0
+expand_mode = 1
+
+[node name="Sombra" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 482.0
+offset_right = 1157.0
+offset_bottom = 650.0
+texture = ExtResource("5_txvij")
+expand_mode = 1
+
+[node name="ConfigButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 578.0
+offset_right = 1796.0
+offset_bottom = 876.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("8_xkpt5")
+
+[node name="ConfigPopupLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="ConfigPopupLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -325.0
+offset_right = 579.0
+offset_bottom = 326.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.701961)
+
+[node name="Panel" type="Panel" parent="ConfigPopupLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = -140.0
+offset_right = 258.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_dw6hg")
+
+[node name="Label" type="Label" parent="ConfigPopupLayer/Panel"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 61.0
+offset_right = 367.0
+offset_bottom = 81.0
+text = "Configurações"
+horizontal_alignment = 1
+
+[node name="FecharButton" type="TextureButton" parent="ConfigPopupLayer/Panel"]
+layout_mode = 0
+offset_left = 473.0
+offset_top = -20.0
+offset_right = 818.0
+offset_bottom = 323.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("14_ke7md")
+
+[node name="SomButton" type="TextureButton" parent="ConfigPopupLayer/Panel"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 104.0
+offset_right = 618.0
+offset_bottom = 487.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("15_6wnab")
+
+[node name="MusicaButton" type="TextureButton" parent="ConfigPopupLayer/Panel"]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 105.0
+offset_right = 520.0
+offset_bottom = 488.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("16_1d50t")
+
+[node name="VibraButton" type="TextureButton" parent="ConfigPopupLayer/Panel"]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 103.0
+offset_right = 716.0
+offset_bottom = 486.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("17_2tyx7")
+
+[node name="SairContaButton" type="TextureButton" parent="ConfigPopupLayer"]
+offset_left = 465.0
+offset_top = 374.0
+offset_right = 2001.0
+offset_bottom = 672.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("18_dq4qh")
+
+[node name="SalvarButton" type="TextureButton" parent="ConfigPopupLayer"]
+offset_left = 650.0
+offset_top = 464.0
+offset_right = 1690.0
+offset_bottom = 730.0
+scale = Vector2(0.15, 0.15)
+texture_normal = ExtResource("19_lrvo1")
+
+[node name="ProfileInfo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 64.0
+texture = ExtResource("19_qevr3")
+expand_mode = 1
+
+[node name="PersonagemIcone" type="TextureRect" parent="ProfileInfo"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 72.0
+offset_bottom = 56.0
+expand_mode = 1
+
+[node name="NomeJogador" type="Label" parent="ProfileInfo"]
+layout_mode = 2
+offset_left = 72.0
+offset_top = 21.0
+offset_right = 280.0
+offset_bottom = 41.0
+horizontal_alignment = 1

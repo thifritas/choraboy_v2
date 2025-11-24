@@ -1,0 +1,140 @@
+[gd_scene load_steps=20 format=3 uid="uid://dek14rh3656fn"]
+
+[ext_resource type="Script" uid="uid://bwjrh58eddxm8" path="res://Scenes/TelaSelecaoPersonagem.gd" id="1_abfpt"]
+[ext_resource type="Texture2D" uid="uid://cxj70va86407i" path="res://Assets/Screen/buttons/back_button.svg" id="2_a7bu7"]
+[ext_resource type="Texture2D" uid="uid://cedner1tnce81" path="res://Assets/Screen/buttons/mika_button.svg" id="3_jrhm7"]
+[ext_resource type="Texture2D" uid="uid://p72dsydpknyd" path="res://Assets/Screen/buttons/back_button_black.svg" id="4_7whsr"]
+[ext_resource type="Texture2D" uid="uid://ekjbtmtlhsnc" path="res://Assets/Screen/buttons/allan_button.svg" id="4_jrsdc"]
+[ext_resource type="Texture2D" uid="uid://bb2jlok4tj7o6" path="res://Assets/Screen/buttons/mika_icon.png" id="4_nto0g"]
+[ext_resource type="Texture2D" uid="uid://g5qww5s8nq2r" path="res://Assets/Screen/buttons/allan_icon.png" id="7_043aa"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_abfpt"]
+load_path = "res://.godot/imported/Mainframe.svg-8e51601a5ecb416c95e52dd74a344c98.ctex"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7whsr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nto0g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_043aa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40jqa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uxcr4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dyk3m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jrsdc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b3kyq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1wvcm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jpo2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cjame"]
+
+[node name="TelaSelecaoPersonagem" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_abfpt")
+
+[node name="Mainframe" type="Sprite2D" parent="."]
+position = Vector2(576, 325)
+scale = Vector2(0.152442, 0.152442)
+texture = SubResource("CompressedTexture2D_abfpt")
+
+[node name="SaudacaoLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 552.0
+offset_top = 216.0
+offset_right = 560.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="VoltarButton" type="Button" parent="."]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 144.0
+offset_bottom = 88.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7whsr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nto0g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_043aa")
+icon = ExtResource("2_a7bu7")
+expand_icon = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 385.0
+offset_top = 283.0
+offset_right = 529.0
+offset_bottom = 445.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_40jqa")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uxcr4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dyk3m")
+icon = ExtResource("3_jrhm7")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Button"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 22.0
+offset_right = 130.0
+offset_bottom = 117.0
+texture = ExtResource("4_nto0g")
+expand_mode = 1
+
+[node name="ConfirmarButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 673.0
+offset_top = 486.0
+offset_right = 849.0
+offset_bottom = 534.0
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_jrsdc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b3kyq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1wvcm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jpo2e")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cjame")
+disabled = true
+text = "Confirma"
+icon = ExtResource("4_7whsr")
+icon_alignment = 1
+expand_icon = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 623.0
+offset_top = 283.0
+offset_right = 767.0
+offset_bottom = 445.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_40jqa")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uxcr4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dyk3m")
+icon = ExtResource("4_jrsdc")
+icon_alignment = 1
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="Button2"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 22.0
+offset_right = 127.0
+offset_bottom = 118.0
+texture = ExtResource("7_043aa")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 248.0
+offset_right = 748.0
+offset_bottom = 268.0
+text = "Selecione o seu personagem"
+horizontal_alignment = 1

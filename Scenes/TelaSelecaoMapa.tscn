@@ -1,0 +1,94 @@
+[gd_scene load_steps=11 format=3 uid="uid://do8vqrn1lishr"]
+
+[ext_resource type="Script" uid="uid://cqcqq0qfi71a2" path="res://Scenes/TelaSelecaoMapa.gd" id="1_u5q0q"]
+[ext_resource type="Texture2D" uid="uid://dojk7llblp0yc" path="res://Assets/Screen/Fundo_Escolha_Mapa.png" id="2_a4noo"]
+[ext_resource type="Texture2D" uid="uid://cxj70va86407i" path="res://Assets/Screen/buttons/back_button.svg" id="3_qksco"]
+[ext_resource type="Texture2D" uid="uid://dol8jbt47gr35" path="res://Assets/Screen/SaoPaulo.png" id="4_to1dx"]
+[ext_resource type="Texture2D" uid="uid://4mfmpb75uh7m" path="res://Assets/Screen/SP.png" id="5_k2qt7"]
+[ext_resource type="Texture2D" uid="uid://dfruppri1uvh0" path="res://Assets/Screen/RiodeJaneiro.png" id="6_j6p2j"]
+[ext_resource type="Texture2D" uid="uid://iayck4rpnlet" path="res://Assets/Screen/RJ.png" id="7_jwjr2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wjcvg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tsuv1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ih8r"]
+
+[node name="TelaSelecaoMapa" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u5q0q")
+
+[node name="Fundo_Mapas" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -8.0
+offset_right = 1159.0
+offset_bottom = 656.0
+texture = ExtResource("2_a4noo")
+expand_mode = 1
+
+[node name="SaoPauloButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 285.0
+offset_top = 239.0
+offset_right = 2785.0
+offset_bottom = 2830.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("4_to1dx")
+icon_alignment = 1
+expand_icon = true
+
+[node name="SP" type="TextureRect" parent="SaoPauloButton"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 210.0
+offset_right = 2110.0
+offset_bottom = 1940.0
+texture = ExtResource("5_k2qt7")
+expand_mode = 1
+
+[node name="RioJaneiro" type="Button" parent="."]
+layout_mode = 2
+offset_left = 607.0
+offset_top = 239.0
+offset_right = 3107.0
+offset_bottom = 2830.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("6_j6p2j")
+icon_alignment = 1
+expand_icon = true
+
+[node name="RJ" type="TextureRect" parent="RioJaneiro"]
+layout_mode = 0
+offset_left = 380.0
+offset_top = 210.0
+offset_right = 2110.0
+offset_bottom = 1940.0
+texture = ExtResource("7_jwjr2")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 155.0
+offset_right = 801.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 21
+text = "Seletor de mapa"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VoltarButton" type="Button" parent="."]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 144.0
+offset_bottom = 88.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wjcvg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tsuv1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8ih8r")
+icon = ExtResource("3_qksco")
+expand_icon = true

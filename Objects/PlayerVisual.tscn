@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd0oqawwvror3"]
+
+[ext_resource type="Script" uid="uid://bo72rmt2gxv8n" path="res://Objects/PlayerVisual.gd" id="1_gv6je"]
+
+[node name="PlayerVisual" type="Node2D"]
+script = ExtResource("1_gv6je")
+
+[node name="CarroSprite" type="Sprite2D" parent="."]
+
+[node name="PersonagemSprite" type="Sprite2D" parent="."]

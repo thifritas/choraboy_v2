@@ -1,0 +1,81 @@
+[gd_scene load_steps=14 format=3 uid="uid://c7qh31vu3h03p"]
+
+[ext_resource type="Script" uid="uid://qh7m537acypp" path="res://Scenes/TelaCarroInicial.gd" id="1_ch2rl"]
+[ext_resource type="Texture2D" uid="uid://cxj70va86407i" path="res://Assets/Screen/buttons/back_button.svg" id="1_i2r2d"]
+[ext_resource type="Texture2D" uid="uid://dptiwjeajgho8" path="res://Assets/Cars/gol_frame.png" id="2_2422d"]
+[ext_resource type="Texture2D" uid="uid://p72dsydpknyd" path="res://Assets/Screen/buttons/back_button_black.svg" id="3_q2vk4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2422d"]
+load_path = "res://.godot/imported/Mainframe.svg-8e51601a5ecb416c95e52dd74a344c98.ctex"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q2vk4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ch2rl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0a3n3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pxgt0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7xxy7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iu2nf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qtthw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjk3b"]
+
+[node name="TelaCarroInicial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ch2rl")
+
+[node name="Mainframe" type="Sprite2D" parent="."]
+position = Vector2(575, 325)
+scale = Vector2(0.152442, 0.152442)
+texture = SubResource("CompressedTexture2D_2422d")
+
+[node name="VoltarButton" type="Button" parent="."]
+offset_top = 40.0
+offset_right = 144.0
+offset_bottom = 88.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q2vk4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ch2rl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0a3n3")
+icon = ExtResource("1_i2r2d")
+expand_icon = true
+
+[node name="Label" type="Label" parent="."]
+offset_left = 404.0
+offset_top = 226.0
+offset_right = 749.0
+offset_bottom = 246.0
+text = "Seu carro inicial"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 272.0
+offset_right = 724.0
+offset_bottom = 424.0
+texture = ExtResource("2_2422d")
+expand_mode = 1
+
+[node name="ConfirmarButton" type="Button" parent="."]
+offset_left = 673.0
+offset_top = 486.0
+offset_right = 849.0
+offset_bottom = 534.0
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_pxgt0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7xxy7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_iu2nf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_qtthw")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gjk3b")
+text = "Confirma"
+icon = ExtResource("3_q2vk4")
+icon_alignment = 1
+expand_icon = true
